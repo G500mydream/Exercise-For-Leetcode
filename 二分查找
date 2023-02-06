@@ -1,0 +1,10 @@
+int search(int* nums, int numsSize, int target){
+    for(int i=0;i<numsSize;i++){
+        if(nums[i]==target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+//这个题我并没有用二分查找的方法来实现，而是暴力使用一个循环来查找，之后我们再详细考虑如何实现以空间换取时间的策略降低算法时间复杂度
