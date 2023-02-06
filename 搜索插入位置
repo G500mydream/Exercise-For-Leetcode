@@ -1,0 +1,17 @@
+int searchInsert(int* nums, int numsSize, int target){
+    for(int i=0;i<numsSize-1;i++){
+        if(nums[i]==target){
+            return i;
+        }else if(nums[i]<target&&nums[i+1]>target){
+           return i+1;
+        }else if(nums[i+1]==target){
+            return i+1;
+        }
+    }
+    if(nums[numsSize-1]<target){
+        return numsSize;
+    }
+    return 0;
+}
+
+//思考得并不深入，多数时候取了巧，感觉自己做了这个题并没有太大的提升
