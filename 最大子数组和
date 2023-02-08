@@ -1,0 +1,9 @@
+int maxSubArray(int* nums, int numsSize){
+    int pre = 0, maxAns = nums[0];
+    for (int i = 0; i < numsSize; i++) {
+        pre = fmax(pre + nums[i], nums[i]);
+        maxAns = fmax(maxAns, pre);
+    }
+    return maxAns;
+}
+//参考了官方题解，还是总是管不住自己的内心让它平静下来做题，我还是没有学会动态规划
