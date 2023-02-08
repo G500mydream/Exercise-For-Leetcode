@@ -1,0 +1,14 @@
+int maxProfit(int* prices, int pricesSize){
+    int most=0;
+    int min=prices[0];
+    for(int i=0;i<pricesSize;i++){
+        if(prices[i]<min){
+            min=prices[i];
+        }
+        if(most<prices[i]-min){
+            most=prices[i]-min;
+        }
+    }
+    return most;
+}
+//这个思路是我看了评论区之后写出来的，也只能算取巧的办法，并没有涉及到系统化学习数据结构后处理的方法
