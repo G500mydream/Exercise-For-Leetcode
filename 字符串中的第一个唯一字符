@@ -1,0 +1,28 @@
+int firstUniqChar(char * s){
+    char *ptr=s;
+    int n=strlen(s);
+    int tmp=-1;
+    bool judge=false;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i==j){
+                continue;
+            }
+            if(*(ptr+i)==*(s+j)){
+                judge=true;
+                break;
+            }
+        }
+        if(judge==false){
+            tmp=i;
+            break;
+        }else{
+            judge=false;
+            tmp=-1;
+            continue;
+        }
+    }
+    return tmp;
+}
+
+//此方法比较暴力
